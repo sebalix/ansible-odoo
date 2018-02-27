@@ -7,7 +7,7 @@ Type=simple
 User={{ odoo_user }}
 WorkingDirectory={{ odoo_workdir }}
 ExecStart={{ odoo_buildout_odoo_bin_path }}
-{% for name, value in odoo_init_env.iteritems() %}
+{% for name, value in odoo_init_env.items() %}
 Environment={{ name }}={{ value }}
 {% endfor %}
 

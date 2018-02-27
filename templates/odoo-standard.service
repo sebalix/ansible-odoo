@@ -11,7 +11,7 @@ ExecStart={{ odoo_rootdir }}/odoo-bin --logfile {{ odoo_logdir }}/{{ odoo_servic
 {% else %}
 ExecStart={{ odoo_rootdir }}/odoo.py --logfile {{ odoo_logdir }}/{{ odoo_service}}.log --config {{ odoo_config_file }}
 {% endif %}
-{% for name, value in odoo_init_env.iteritems() %}
+{% for name, value in odoo_init_env.items() %}
 Environment={{ name }}={{ value }}
 {% endfor %}
 
