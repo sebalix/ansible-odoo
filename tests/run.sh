@@ -1,7 +1,11 @@
 #!/bin/sh
 HERE=$(dirname $(readlink -m $0))
 VENV=/opt/ansible-venv
-CMD="$VENV/bin/ansible-playbook -i tests/inventory"
+if [[ "$PYTHON_VERSION" == '3' ]]; then
+    CMD="$VENV/bin/ansible-playbook -i tests/inventory_py3"
+else
+    CMD="$VENV/bin/ansible-playbook -i tests/inventory"
+fi
 cd $HERE/..
 # Configure environment
 export PAGER=cat

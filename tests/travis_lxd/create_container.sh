@@ -12,6 +12,7 @@ lxc start $1 && sleep 4 && lxc list
 lxc config set $1 environment.ODOO_VERSION $ODOO_VERSION
 lxc config set $1 environment.ODOO_INSTALL_TYPE $ODOO_INSTALL_TYPE
 lxc config set $1 environment.ANSIBLE_VERSION $ANSIBLE_VERSION
+lxc config set $1 environment.PYTHON_VERSION $PYTHON_VERSION
 # Copy the project files into the container
 cp -av $HERE/../.. $CT_DIR/rootfs/opt/ansible-odoo
 # Install the test environment
