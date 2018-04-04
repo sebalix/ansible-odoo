@@ -4,71 +4,19 @@ dist: trusty
 
 env:
   # Debian 8 (jessie)
-  #     Odoo 8.0
-  - IMAGE="images:debian/jessie" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/jessie" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/jessie" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 9.0
-  - IMAGE="images:debian/jessie" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/jessie" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/jessie" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 10.0
-  - IMAGE="images:debian/jessie" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/jessie" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/jessie" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/jessie" ODOO_VERSIONS="8.0 9.0 10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
   # Debian 9 (stretch)
-  #     Odoo 8.0
-  - IMAGE="images:debian/stretch" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 9.0
-  - IMAGE="images:debian/stretch" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 10.0
-  - IMAGE="images:debian/stretch" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 11.0
-  - IMAGE="images:debian/stretch" ODOO_VERSION=11.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=11.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="images:debian/stretch" ODOO_VERSION=11.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/stretch" ODOO_VERSIONS="8.0 9.0 10.0 11.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
   # Ubuntu 14.04 (trusty)
-  #     Odoo 8.0
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 9.0
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 10.0
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:trusty" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:trusty" ODOO_VERSIONS="8.0 9.0 10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
   # Ubuntu 16.04 (xenial)
-  #     Odoo 8.0
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=8.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 9.0
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=9.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 10.0
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=10.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
-  #     Odoo 11.0
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=11.0 ODOO_INSTALL_TYPE=standard ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=11.0 ODOO_INSTALL_TYPE=buildout ANSIBLE_VERSION="2.4,<2.5"
-  - IMAGE="ubuntu:xenial" ODOO_VERSION=11.0 ODOO_INSTALL_TYPE=pip ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:xenial" ODOO_VERSIONS="8.0 9.0 10.0 11.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
 
 install:
-  # Spawn a LXD container
+  # Spawn multiple LXD container
   - sudo ./tests/travis_lxd/install.sh
-  - sudo ./tests/travis_lxd/create_container.sh odoo-test
+  - sudo ./tests/travis_lxd/create_base_container.sh odoo-test
 
 script:
-  # Test the project into the container
-  - sudo lxc exec odoo-test -- sh -c "/opt/ansible-odoo/tests/run.sh"
+  # Test the project into these containers
+  - sudo ./tests/travis_lxd/run_tests_in_container.sh odoo-test
