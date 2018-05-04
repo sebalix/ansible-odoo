@@ -4,13 +4,23 @@ dist: trusty
 
 env:
   # Debian 8 (jessie)
-  - IMAGE="images:debian/jessie" ODOO_VERSIONS="8.0 9.0 10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/jessie" ODOO_VERSIONS="8.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/jessie" ODOO_VERSIONS="9.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/jessie" ODOO_VERSIONS="10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
   # Debian 9 (stretch)
-  - IMAGE="images:debian/stretch" ODOO_VERSIONS="8.0 9.0 10.0 11.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/stretch" ODOO_VERSIONS="8.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/stretch" ODOO_VERSIONS="9.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/stretch" ODOO_VERSIONS="10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="images:debian/stretch" ODOO_VERSIONS="11.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
   # Ubuntu 14.04 (trusty)
-  - IMAGE="ubuntu:trusty" ODOO_VERSIONS="8.0 9.0 10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:trusty" ODOO_VERSIONS="8.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:trusty" ODOO_VERSIONS="9.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:trusty" ODOO_VERSIONS="10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
   # Ubuntu 16.04 (xenial)
-  - IMAGE="ubuntu:xenial" ODOO_VERSIONS="8.0 9.0 10.0 11.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:xenial" ODOO_VERSIONS="8.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:xenial" ODOO_VERSIONS="9.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:xenial" ODOO_VERSIONS="10.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
+  - IMAGE="ubuntu:xenial" ODOO_VERSIONS="11.0" ODOO_INSTALL_TYPES="standard buildout pip" ANSIBLE_VERSION="2.4,<2.5"
 
 install:
   # Spawn multiple LXD container
