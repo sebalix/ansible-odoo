@@ -30,4 +30,5 @@ install:
 
 script:
   # Test the project into these containers
+  - ls -lA /var/lib/lxd/
   - sudo ./tests/travis_lxd/run_tests_in_container.sh odoo-test
