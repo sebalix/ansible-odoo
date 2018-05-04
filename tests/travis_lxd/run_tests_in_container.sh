@@ -29,7 +29,7 @@ do
         TESTS_RC+=( $? )
         # Stop the container...
         echo -e "\nStop the $CT_NAME container..."
-        lxc stop $CT_NAME
+        lxc stop -f $CT_NAME
         # Delete the container...
         echo -e "\nDelete the $CT_NAME container (free disk space)..."
         lxc delete $CT_NAME

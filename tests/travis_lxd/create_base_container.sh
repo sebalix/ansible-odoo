@@ -31,5 +31,4 @@ cp -av $APT_CACHE_CONF_FILE $CT_DIR/rootfs/etc/apt/apt.conf.d/
 # Install the test environment
 lxc exec $1 -- sh -c "/opt/ansible-odoo/tests/install_test_env.sh" || exit 1
 # Stop the container
-echo "STOP CONTAINER $1"
-lxc stop $1
+lxc stop -f $1
