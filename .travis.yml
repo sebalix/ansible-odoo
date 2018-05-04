@@ -67,6 +67,7 @@ env:
 install:
   # Spawn a LXD container
   - sudo ./tests/travis_lxd/install.sh
+  - sudo ./tests/travis_lxd/set_storage_pool_ramdisk.sh
   - sudo ./tests/travis_lxd/create_container.sh odoo-test
 
 script:
