@@ -13,6 +13,9 @@ do
         echo -e "###########################################################"
         echo -e "# $CT_NAME"
         echo -e "###########################################################\n"
+        # Copy the container...
+        echo -e "\nCopy $1 container to $CT_NAME..."
+        lxc copy $1 $CT_NAME && sleep 4 && lxc list || exit 1
         # Start the container...
         echo -e "\nStart the $CT_NAME container..."
         lxc start $CT_NAME && sleep 4 && lxc list

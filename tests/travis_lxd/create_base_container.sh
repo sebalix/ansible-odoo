@@ -26,21 +26,9 @@ lxc start $1 && sleep 4 && lxc list
 lxc config set $1 environment.ANSIBLE_VERSION $ANSIBLE_VERSION
 # Copy the project files into the container
 cp -av $HERE/../.. $CT_DIR/rootfs/opt/ansible-odoo
+# Configure APT to use the APT cache from host
+cp -av $APT_CACHE_CONF_FILE $CT_DIR/rootfs/etc/apt/apt.conf.d/
 # Install the test environment
 lxc exec $1 -- sh -c "/opt/ansible-odoo/tests/install_test_env.sh" || exit 1
 # Stop the container
 lxc stop $1
-# Copy the container into multiple flavors
-for odoo_version in "${ODOO_VERSIONS[@]}"
-do
-    for odoo_install_type in "${ODOO_INSTALL_TYPES[@]}"
-    do
-        version=$(echo $odoo_version | cut -d. -f1)
-        CT_NAME="$1-$version-$odoo_install_type"
-        # Copy the container...
-        echo -e "\nCopy $1 container to $CT_NAME..."
-        lxc copy $1 $CT_NAME && sleep 4 && lxc list || exit 1
-        # Configure APT to use the APT cache from host
-        cp -av $APT_CACHE_CONF_FILE $CT_DIR/rootfs/etc/apt/apt.conf.d/
-    done
-done
