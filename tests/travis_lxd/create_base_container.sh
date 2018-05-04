@@ -41,6 +41,6 @@ do
         echo -e "\nCopy $1 container to $CT_NAME..."
         lxc copy $1 $CT_NAME && sleep 4 && lxc list || exit 1
         # Configure APT to use the APT cache from host
-        cp -av $APT_CACHE_CONF_FILE $CT_DIR/rootfs/etc/apt/apt.conf.d/
+        # cp -av $APT_CACHE_CONF_FILE $CT_DIR/rootfs/etc/apt/apt.conf.d/
     done
 done
