@@ -30,6 +30,7 @@ do
         # Delete the container...
         echo -e "\nDelete the $CT_NAME container (free disk space)..."
         lxc delete $CT_NAME
+        df -h
     done
 done
 
